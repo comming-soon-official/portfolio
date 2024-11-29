@@ -4,6 +4,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { MagicCard } from './ui/magic-card';
 import HyperText from './ui/hyper-text';
+import Safari from './ui/safari';
 
 const projectsData = [
   {
@@ -12,7 +13,7 @@ const projectsData = [
       'Collaborated and build a synchronized video watching platform that allows users to watch content together in real-time with video/audio chat capabilities.',
     link: 'https://watchwithme.in',
     code: 'private',
-    previewVideo: '/videos/WatchWithMePreview.mp4',
+    imageSrc: '/images/watchwithme.png',
     technologies: ['Next.js', 'React', 'LiveKit', 'TypeScript', 'Tailwind CSS', 'WebRTC'],
   },
   {
@@ -21,7 +22,7 @@ const projectsData = [
       'Collaborated minor parts to develop a professional portfolio and blog platform for showcasing development work and technical writing. Features dark mode, responsive design, and optimized performance.',
     link: 'https://cyberkrypts.dev',
     code: 'https://github.com/cyberkrypts/cyberkrypts.dev',
-    previewVideo: '/videos/CyberKryptsPreview.mp4',
+    imageSrc: '/images/cyberkrypts.png',
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'MDX', 'SandBox', 'Devops'],
   },
   {
@@ -30,7 +31,7 @@ const projectsData = [
       'AI-powered platform for Hindu scripture analysis and interpretation, featuring natural language processing and semantic search.',
     link: 'https://hindhusmia.ai',
     code: 'private',
-    previewVideo: '/videos/HindhuSmiaPreview.mp4',
+    imageSrc: '/images/hindumisia.png',
     technologies: [
       'Next.js',
       'React',
@@ -48,7 +49,7 @@ const projectsData = [
       'Collaborated with financial experts and developers to create a modern accounting and business management platform built for Indian businesses with GST compliance and financial reporting.',
     link: 'https://web.bahikhata.org',
     code: 'private',
-    previewVideo: '/videos/BahikhataPreview.mp4',
+    imageSrc: '/images/bahikhata.png',
     technologies: ['React', 'MongoDB', 'Node.js', 'Bootstrap'],
   },
   {
@@ -57,7 +58,7 @@ const projectsData = [
       'Developed an enterprise SaaS platform for AI/ML model testing and validation. Features real-time monitoring, multi-pipeline support, and comprehensive reporting.',
     link: 'https://prod.aiensured.com',
     code: 'private',
-    previewVideo: '/videos/TestaingPreview.mp4',
+    imageSrc: '/images/aiensured_saas.png',
     technologies: [
       'ReactJS',
       'Bootstrap',
@@ -76,7 +77,7 @@ const projectsData = [
       'Worked alongside the AIEnsured team to build a data visualization for AI/ML large datas.',
     link: 'https://prod.aiensured.com',
     code: 'private',
-    previewVideo: '/videos/AIEnsuredPreview.mp4',
+    imageSrc: '/images/aiensured_pipeline.png',
     technologies: ['ReactJS', 'Bootstrap', 'MongoDB', 'Graphs', 'Parse Platform', 'NodeJS'],
   },
 ];
@@ -89,13 +90,15 @@ function Projects() {
         {projectsData.map((project, index) => (
           <MagicCard key={index}>
             <div className="flex flex-col">
-              <video
-                src={project.previewVideo}
+              <Safari url="magicui.design" className="size-full" src={project.imageSrc} />
+
+              {/* <video
+                src={project.imageSrc}
                 autoPlay
                 muted
                 loop
                 className="rounded-t-md -mx-4 -mt-4 mb-4"
-              />
+              /> */}
               <div className="flex flex-col gap-3">
                 <h2 className="text-xl font-bold">{project.title}</h2>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{project.description}</p>

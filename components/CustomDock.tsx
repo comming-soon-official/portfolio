@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from 'lucide-react';
+import { BookOpenText, CalendarIcon, HomeIcon, MailIcon } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button, buttonVariants } from '@/components/ui/button';
@@ -61,7 +61,7 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: '#', icon: HomeIcon, label: 'Home' },
-    { href: 'https://www.watchwithme.in/blog', icon: PencilIcon, label: 'Blog' },
+    { href: 'https://www.watchwithme.in/blog', icon: BookOpenText, label: 'Blog' },
   ],
   contact: {
     social: {

@@ -28,7 +28,6 @@ export default function Intro() {
           for code quality and scalability.
         </p>
       </div>
-      <div className="flex items-center justify-center md:mb-0"></div>
     </div>
   );
 }
