@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
+import { MagicCard } from './ui/magic-card';
 
 const projectsData = [
   {
@@ -85,30 +86,38 @@ function Projects() {
       <h1 className="text-2xl font-bold">Overall Projects</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projectsData.map((project, index) => (
-          <div key={index} className="flex flex-col border rounded-md dark:border-gray-700">
-            <video src={project.previewVideo} autoPlay muted loop className="rounded-t-md" />
-            <div className="flex flex-col gap-3 p-4 grow">
-              <h2 className="text-xl font-bold">{project.title}</h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{project.description}</p>
-              <div className="flex flex-wrap gap-[4px]">
-                {project.technologies.map((technology, index) => (
-                  <Badge key={index} variant={'outline'}>
-                    {technology}
-                  </Badge>
-                ))}
-              </div>
-              <div className="flex gap-2 mt-auto">
-                <Link href={project.link}>
-                  <Button variant="default">View</Button>
-                </Link>
-                {project.code !== 'private' && (
-                  <Link href={project.code}>
-                    <Button variant="outline">Code</Button>
+          <MagicCard key={index}>
+            <div className="flex flex-col">
+              <video
+                src={project.previewVideo}
+                autoPlay
+                muted
+                loop
+                className="rounded-t-md -mx-4 -mt-4 mb-4"
+              />
+              <div className="flex flex-col gap-3">
+                <h2 className="text-xl font-bold">{project.title}</h2>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{project.description}</p>
+                <div className="flex flex-wrap gap-[4px]">
+                  {project.technologies.map((technology, index) => (
+                    <Badge key={index} variant={'outline'}>
+                      {technology}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="flex gap-2 mt-4">
+                  <Link href={project.link}>
+                    <Button variant="default">View</Button>
                   </Link>
-                )}
+                  {project.code !== 'private' && (
+                    <Link href={project.code}>
+                      <Button variant="outline">Code</Button>
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          </MagicCard>
         ))}
       </div>
     </div>

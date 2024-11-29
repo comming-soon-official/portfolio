@@ -122,7 +122,6 @@ export function CustomDock() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link
-                    target="_blank"
                     href={item.href}
                     className={cn(
                       buttonVariants({ variant: 'ghost', size: 'icon' }),

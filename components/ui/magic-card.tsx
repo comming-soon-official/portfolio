@@ -22,7 +22,10 @@ export const MagicCard: React.FC<MagicCardProps> = ({ children, className }) => 
   return (
     <div
       className={cn(
-        'group relative w-full rounded-xl border border-white/10 bg-gray-900/5 dark:bg-gray-100/5 px-4 py-4 shadow-md transition duration-200 hover:shadow-xl',
+        'group relative w-full rounded-xl border border-zinc-200 dark:border-zinc-800',
+        'bg-white dark:bg-zinc-950',
+        'px-4 py-4',
+        'shadow-sm hover:shadow-md transition duration-200',
         className
       )}
       onMouseMove={handleMouseMove}
@@ -33,13 +36,13 @@ export const MagicCard: React.FC<MagicCardProps> = ({ children, className }) => 
           background: useMotionTemplate`
             radial-gradient(
               350px circle at ${mouseX}px ${mouseY}px,
-              rgba(255,255,255,0.1),
+              rgba(14, 165, 233, 0.15),
               transparent 80%
             )
           `,
         }}
       />
-      {children}
+      <div className="relative z-10">{children}</div>
     </div>
   );
 };

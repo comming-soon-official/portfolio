@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Globe } from 'lucide-react';
+import { MagicCard } from './ui/magic-card';
 
 const languages = [
   {
@@ -34,15 +34,16 @@ export default function Languages() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all"
           >
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">{lang.flag}</span>
-              <div>
-                <h3 className="font-medium">{lang.language}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{lang.proficiency}</p>
+            <MagicCard>
+              <div className="flex items-center gap-2">
+                {/* <span className="text-2xl">{lang.flag}</span> */}
+                <div>
+                  <h3 className="font-medium">{lang.language}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{lang.proficiency}</p>
+                </div>
               </div>
-            </div>
+            </MagicCard>
           </motion.div>
         ))}
       </div>

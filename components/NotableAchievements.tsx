@@ -45,7 +45,7 @@ export default function NotableAchievements() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="flex items-center gap-4 mb-3">
-                <div className="text-blue-500 dark:text-blue-400">{achievement.icon}</div>
+                {/* <div className="text-yellow-500 dark:text-yellow-400">{achievement.icon}</div> */}
                 <h3 className="font-semibold text-lg">{achievement.title}</h3>
               </div>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
