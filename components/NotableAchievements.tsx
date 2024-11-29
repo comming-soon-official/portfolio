@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Trophy, Award, BookOpen } from 'lucide-react';
 import { MagicCard } from './ui/magic-card';
+import HyperText from './ui/hyper-text';
 
 const achievements = [
   {
@@ -34,7 +35,7 @@ const achievements = [
 export default function NotableAchievements() {
   return (
     <section className="py-10">
-      <h2 className="text-2xl font-bold mb-6">Notable Achievements</h2>
+      <HyperText className="text-2xl font-bold" text="Notable Achievements" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {achievements.map((achievement, index) => (

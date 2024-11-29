@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MagicCard } from './ui/magic-card';
+import HyperText from './ui/hyper-text';
 
 const languages = [
   {
@@ -25,7 +26,7 @@ export default function Languages() {
   return (
     <section className="py-10">
       <div className="flex items-center gap-2 mb-6">
-        <h2 className="text-2xl font-bold">Languages</h2>
+        <HyperText className="text-2xl font-bold" text="Languages" />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {languages.map((lang, index) => (

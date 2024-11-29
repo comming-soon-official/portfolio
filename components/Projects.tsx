@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { MagicCard } from './ui/magic-card';
+import HyperText from './ui/hyper-text';
 
 const projectsData = [
   {
@@ -83,7 +84,7 @@ const projectsData = [
 function Projects() {
   return (
     <div className="flex flex-col gap-4 w-full">
-      <h1 className="text-2xl font-bold">Overall Projects</h1>
+      <HyperText className="text-2xl font-bold" text="Overall Projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projectsData.map((project, index) => (
           <MagicCard key={index}>

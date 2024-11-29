@@ -1,5 +1,6 @@
 import React from 'react';
 import { Badge } from './ui/badge';
+import HyperText from './ui/hyper-text';
 
 interface SkillCategory {
   primary?: string[];
@@ -82,7 +83,7 @@ const skillsData: SkillsData = {
 function Skills() {
   return (
     <div className="flex flex-col gap-6 w-full">
-      <h1 className="text-2xl font-bold">Skills</h1>
+      <HyperText className="text-2xl font-bold" text="Skills" />
       <div className="flex flex-col gap-4">
         {Object.entries(skillsData).map(([category, skills]) => (
           <div key={category} className="flex flex-col gap-2">

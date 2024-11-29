@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import HyperText from './ui/hyper-text';
 
 export default function Intro() {
   const [isMounted, setIsMounted] = useState(false);
@@ -17,12 +18,14 @@ export default function Intro() {
   return (
     <div className="w-full flex flex-col-reverse lg:flex-row gap-14 justify-between items-center -z-10">
       <div className="flex flex-col gap-2 w-full lg:w-4/5">
-        <h1 className="text-4xl font-bold mb-4">Hi! I&apos;m Himal.</h1>
+        <HyperText className="text-4xl font-bold text-black dark:text-white" text="Hi! I'm Himal" />
         <p className="text-base text-gray-800 dark:text-gray-300">
-          Full-stack developer with 3+ years of experience building and scaling web applications. I
-          specialize in Frontend and cloud infrastructure, currently crafting solutions in AI/ML,
-          video streaming, and fintech domains. Passionate about clean code, system architecture,
-          and building high-performance applications that solve real-world problems.
+          Full-stack developer with <span></span>years expertise in building scalable web
+          applications and cloud infrastructure. Currently leading development of AI/ML platforms,
+          browser extensions, and mobile applications. Proven track record in architecting
+          high-performance solutions across fintech, video streaming, and enterprise SaaS domains.
+          Strong focus on system design, cloud-native architectures, and implementing best practices
+          for code quality and scalability.
         </p>
       </div>
       <div className="flex items-center justify-center md:mb-0"></div>

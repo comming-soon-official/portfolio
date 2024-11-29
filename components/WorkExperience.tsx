@@ -1,4 +1,5 @@
 import React from 'react';
+import HyperText from './ui/hyper-text';
 
 interface WorkExperienceItem {
   startDate: string;
@@ -131,7 +132,9 @@ const workExperienceData: WorkExperienceItem[] = [
 const WorkExperience: React.FC = () => {
   return (
     <div className="flex flex-col gap-4 w-full -z-10">
-      <h1 className="text-2xl font-bold">Professional Work Experience</h1>
+      <HyperText className="text-2xl font-bold" text="Professional Work Experience" />
+
+      <h1 className="text-2xl font-bold"></h1>
 
       <ol className="relative border-s border-gray-200 dark:border-gray-700">
         {workExperienceData.map((item, index) => (
