@@ -6,11 +6,6 @@ import HyperText from './ui/hyper-text';
 
 const languages = [
   {
-    language: 'Nepali',
-    proficiency: 'Intermediate',
-    flag: '🇳🇵',
-  },
-  {
     language: 'Tamil',
     proficiency: 'Native',
     flag: '🇮🇳',
@@ -19,6 +14,16 @@ const languages = [
     language: 'English',
     proficiency: 'Proficient',
     flag: '🇬🇧',
+  },
+  {
+    language: 'Nepali',
+    proficiency: 'Intermediate',
+    flag: '🇳🇵',
+  },
+  {
+    language: 'Hindi',
+    proficiency: 'Intermediate',
+    flag: '🇮🇳',
   },
 ];
 
@@ -36,7 +41,7 @@ export default function Languages() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <MagicCard>
+            <MagicCard className="hover:scale-105 transition-all">
               <div className="flex items-center gap-2">
                 {/* <span className="text-2xl">{lang.flag}</span> */}
                 <div>

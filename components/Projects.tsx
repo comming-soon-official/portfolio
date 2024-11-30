@@ -88,8 +88,8 @@ function Projects() {
       <HyperText className="text-2xl font-bold" text="Overall Projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projectsData.map((project, index) => (
-          <MagicCard key={index}>
-            <div className="flex flex-col">
+          <MagicCard key={index} className="hover:scale-105 transition-all">
+            <div className="flex flex-col ">
               <Safari url="magicui.design" className="size-full" src={project.imageSrc} />
 
               {/* <video

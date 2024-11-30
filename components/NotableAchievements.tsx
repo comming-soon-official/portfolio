@@ -39,7 +39,10 @@ export default function NotableAchievements() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {achievements.map((achievement, index) => (
-          <MagicCard key={index} className="relative overflow-hidden">
+          <MagicCard
+            key={index}
+            className="relative overflow-hidden hover:scale-105 transition-all"
+          >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

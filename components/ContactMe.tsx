@@ -17,8 +17,8 @@ function ContactMe() {
           direct question on Instagram
         </Link>{' '}
         or email me directly at{' '}
-        <Link href="mailto:himal9626@gmail.com" className="text-blue-500">
-          himal9626@gmail.com
+        <Link target="_blank" href="mailto:himal9626@gmail.com" className="text-blue-500">
+          himal9626@gmail.com{' '}
         </Link>
       </p>
     </div>
