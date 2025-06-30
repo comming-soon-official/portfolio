@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Himal - Full Stack Developer | React, Node.js, AI/ML Integration',
   description:
-    'Himal is a passionate Full Stack Developer with 5+ years of experience in React, Node.js, Python, and AI/ML integration. Building innovative solutions for startups and enterprises.',
+    'Himal is a passionate Full Stack Developer with 4+ years of experience in React, Node.js, and AI/ML integration. Building innovative solutions for startups and enterprises.',
   keywords: [
     'Full Stack Developer',
     'React Developer',
@@ -45,10 +45,10 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://himal-portfolio.vercel.app',
+    url: 'https://heyhimal.me',
     title: 'Himal - Full Stack Developer | React, Node.js, AI/ML Integration',
     description:
-      'Passionate Full Stack Developer with 5+ years of experience building innovative solutions. Specialized in React, Node.js, Python, and AI/ML integration.',
+      'Passionate Full Stack Developer with 4+ years of experience building innovative solutions. Specialized in React, Node.js, and AI/ML integration.',
     siteName: 'Himal Portfolio',
     images: [
       {
@@ -63,7 +63,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Himal - Full Stack Developer | React, Node.js, AI/ML Integration',
     description:
-      'Passionate Full Stack Developer with 5+ years of experience building innovative solutions.',
+      'Passionate Full Stack Developer with 4+ years of experience building innovative solutions.',
     creator: '@commingsoon9626',
     images: ['/images/og-image.jpg'],
   },
@@ -81,7 +81,7 @@ const jsonLd = {
   name: 'Himal',
   jobTitle: 'Full Stack Developer',
   description:
-    'Passionate Full Stack Developer with 5+ years of experience in React, Node.js, Python, and AI/ML integration.',
+    'Passionate Full Stack Developer with 4+ years of experience in React, Node.js, and AI/ML integration.',
   url: 'https://himal-portfolio.vercel.app',
   email: 'himal9626@gmail.com',
   sameAs: [
