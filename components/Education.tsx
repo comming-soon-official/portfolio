@@ -30,7 +30,7 @@ const EducationData: EducationItem[] = [
 const Education: React.FC = () => {
   return (
     <div className="flex flex-col gap-4 w-full -z-10">
-      <HyperText className="text-2xl font-bold" text="Education" />
+      <HyperText className="text-3xl font-bold uppercase" text="Education" />
 
       <ol className="relative border-s border-gray-200 dark:border-gray-700">
         {EducationData.map((item, index) => (

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { BookOpenText, CalendarIcon, HomeIcon, MailIcon } from 'lucide-react';
+import { BookOpenText, CalendarIcon, HomeIcon, MailIcon, Download } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button, buttonVariants } from '@/components/ui/button';
@@ -35,19 +35,7 @@ const Icons = {
       />
     </svg>
   ),
-  youtube: (props: IconProps) => (
-    <svg
-      width="32px"
-      height="32px"
-      viewBox="0 0 32 32"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <title>youtube</title>
-      <path d="M29.41,9.26a3.5,3.5,0,0,0-2.47-2.47C24.76,6.2,16,6.2,16,6.2s-8.76,0-10.94.59A3.5,3.5,0,0,0,2.59,9.26,36.13,36.13,0,0,0,2,16a36.13,36.13,0,0,0,.59,6.74,3.5,3.5,0,0,0,2.47,2.47C7.24,25.8,16,25.8,16,25.8s8.76,0,10.94-.59a3.5,3.5,0,0,0,2.47-2.47A36.13,36.13,0,0,0,30,16,36.13,36.13,0,0,0,29.41,9.26ZM13.2,20.2V11.8L20.47,16Z" />
-    </svg>
-  ),
+
   github: (props: IconProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path
@@ -59,10 +47,7 @@ const Icons = {
 };
 
 const DATA = {
-  navbar: [
-    { href: '#', icon: HomeIcon, label: 'Home' },
-    { href: 'https://www.watchwithme.in/blog', icon: BookOpenText, label: 'Blog' },
-  ],
+  navbar: [{ href: '#', icon: HomeIcon, label: 'Home' }],
   contact: {
     social: {
       GitHub: {
@@ -85,10 +70,10 @@ const DATA = {
         url: 'mailto:himal9626@gmail.com',
         icon: Icons.email,
       },
-      Youtube: {
-        name: 'YouTube',
-        url: 'https://www.youtube.com/@cyberkrypts',
-        icon: Icons.youtube,
+      DOwnload: {
+        name: 'Download Resume',
+        url: "/images/Himal's Resume 2025.pdf",
+        icon: Download,
       },
     },
   },
@@ -108,12 +93,13 @@ export function CustomDock() {
   }, []);
 
   return (
-    <div
+    <nav
       className={
         !isMobile
           ? 'fixed left-40 top-0 bottom-0 w-24 flex items-center'
           : 'fixed bottom-4 left-1/2 transform -translate-x-1/2 flex items-center'
       }
+      aria-label="Main navigation and social links"
     >
       <TooltipProvider>
         <Dock direction="middle" orientation={isMobile ? 'horizontal' : 'vertical'}>
@@ -127,6 +113,7 @@ export function CustomDock() {
                       buttonVariants({ variant: 'ghost', size: 'icon' }),
                       'size-12 rounded-full'
                     )}
+                    aria-label={item.label}
                   >
                     <item.icon className="size-4" />
                   </Link>
@@ -145,16 +132,18 @@ export function CustomDock() {
                   <Link
                     target="_blank"
                     href={social.url}
+                    rel="noopener noreferrer"
                     className={cn(
                       buttonVariants({ variant: 'ghost', size: 'icon' }),
                       'size-12 rounded-full'
                     )}
+                    aria-label={`Visit ${name} profile`}
                   >
                     <social.icon className="size-4" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent side="right">
-                  <p>{name}</p>
+                  <p>{social.name}</p>
                 </TooltipContent>
               </Tooltip>
             </DockIcon>
@@ -167,6 +156,7 @@ export function CustomDock() {
                   variant="ghost"
                   size="icon"
                   className="size-12 rounded-full flex items-center justify-center"
+                  aria-label="Toggle theme"
                 >
                   {resolvedTheme === 'light' ? (
                     <Moon className="h-[1.2rem] w-[1.2rem] " onClick={() => setTheme('dark')} />
@@ -183,6 +173,6 @@ export function CustomDock() {
           </DockIcon>
         </Dock>
       </TooltipProvider>
-    </div>
+    </nav>
   );
 }

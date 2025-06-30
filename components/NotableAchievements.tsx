@@ -35,7 +35,7 @@ const achievements = [
 export default function NotableAchievements() {
   return (
     <section className="py-10">
-      <HyperText className="text-2xl font-bold" text="Notable Achievements" />
+      <HyperText className="text-3xl font-bold uppercase" text="Notable Achievements" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {achievements.map((achievement, index) => (

@@ -21,15 +21,11 @@ const skillsData: SkillsData = {
     basic: ['Flask', 'Django', 'Gin', 'FastAPI', 'Flutter'],
   },
   Styling: ['Tailwind CSS', 'Bootstrap', 'CSS', 'SASS'],
-  'UI Components': [
-    'ShadCN',
-    'React Bootstrap',
-    'Ant Design',
-    'daisyUI',
-    'NextUI',
-    'MagicUI',
-    'Material UI',
-  ],
+  'UI Components': {
+    primary: ['ShadCN', 'React Bootstrap', 'NextUI', 'MagicUI'],
+    basic: ['Material UI', 'Ant Design', 'daisyUI'],
+  },
+
   Database: ['MongoDB', 'PostgreSQL', 'SQLite', 'RealmDB'],
   'DevOps & Cloud': {
     primary: [
@@ -62,7 +58,8 @@ const skillsData: SkillsData = {
     basic: ['BOF'],
   },
   'Mobile Development': {
-    basic: ['React Native', 'Flutter'],
+    primary: ['React Native'],
+    basic: ['Flutter'],
   },
   Tools: [
     'Postman',
@@ -83,7 +80,7 @@ const skillsData: SkillsData = {
 function Skills() {
   return (
     <div className="flex flex-col gap-6 w-full">
-      <HyperText className="text-2xl font-bold" text="Skills" />
+      <HyperText className="text-3xl font-bold uppercase" text="Skills" />
       <div className="flex flex-col gap-4">
         {Object.entries(skillsData).map(([category, skills]) => (
           <div key={category} className="flex flex-col gap-2">

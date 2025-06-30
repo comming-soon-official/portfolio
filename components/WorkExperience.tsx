@@ -18,6 +18,82 @@ interface WorkExperienceItem {
 
 const workExperienceData: WorkExperienceItem[] = [
   {
+    startDate: 'June 2024',
+    endDate: 'March 2025',
+    companyName: 'Octacomm',
+    jobTitle: 'Full Stack Developer',
+    location: 'Remote',
+    occupation: 'Consultant',
+    description: [
+      {
+        main: 'Developed an end-to-end transcription feature for the open-source meeting platform BigBlueButton (BBB)',
+        sub: [
+          'Supporting over 100+ global and regional languages with translation',
+          'Achieved 98% speaker-level transcription accuracy with individual tracking',
+          'Integrated with a real-time dashboard for easy access and monitoring',
+        ],
+      },
+      {
+        main: 'Added Safari video background filter support in BigBlueButton (BBB)',
+        sub: [
+          'Integrated custom in-browser ML model for real-time video processing',
+          'Maintained audio consistency by adding silent padding',
+          'Enhanced user experience with seamless background effects',
+        ],
+      },
+      {
+        main: 'Built custom backend infrastructure for meeting analytics',
+        sub: [
+          'Implemented Go and PocketBase for efficient data handling',
+          'Created AI scripts with thread concurrency for request processing',
+          'Developed audio chunking algorithms based on silent areas for improved accuracy',
+        ],
+      },
+      {
+        main: 'Enhanced meeting collaboration capabilities',
+        sub: [
+          'LiveKit integration for individual user streaming',
+          'Next.js dashboard for meeting transcription monitoring',
+          'Built meeting summarizer to extract key details and action items',
+        ],
+      },
+    ],
+  },
+  {
+    startDate: 'February 2023',
+    endDate: 'January 2024',
+    companyName: 'Bahikhata Inc.',
+    jobTitle: 'Full Stack Engineer',
+    location: 'Remote',
+    occupation: 'Consultant',
+    description: [
+      {
+        main: 'Developed full-featured expense tracker application',
+        sub: [
+          'SMS OTP Authentication with Redis rate limiting',
+          'Automated recurring transactions via cron jobs',
+          'Data extraction & processing from legal documents to MongoDB',
+        ],
+      },
+      {
+        main: 'Built offline-first React Native mobile application',
+        sub: [
+          'RealmDB integration for offline storage and real-time sync',
+          'Performance optimization and memory leak fixes',
+          'Migration strategies for seamless database upgrades',
+        ],
+      },
+      {
+        main: 'Led DevOps and infrastructure management',
+        sub: [
+          'Jenkins pipeline setup for automated deployments',
+          'AWS infrastructure optimization and management',
+          'Large-scale legacy data migration with zero downtime',
+        ],
+      },
+    ],
+  },
+  {
     startDate: 'September 2021',
     endDate: 'Present',
     companyName: 'TESTAING',
@@ -60,44 +136,10 @@ const workExperienceData: WorkExperienceItem[] = [
     ],
   },
   {
-    startDate: 'February 2023',
-    endDate: 'Present',
-    companyName: 'NINJAMONKS',
-    jobTitle: 'FullStack Developer / Mobile App Developer',
-    location: 'Remote',
-    occupation: 'Consultant',
-    description: [
-      {
-        main: 'Developed full-featured expense tracker application',
-        sub: [
-          'SMS OTP Authentication with Redis rate limiting',
-          'Automated recurring transactions via cron jobs',
-          'Data extraction & processing from legal documents to MongoDB',
-        ],
-      },
-      {
-        main: 'Built offline-first React Native mobile application',
-        sub: [
-          'RealmDB integration for offline storage and real-time sync',
-          'Performance optimization and memory leak fixes',
-          'Migration strategies for seamless database upgrades',
-        ],
-      },
-      {
-        main: 'Led DevOps and infrastructure management',
-        sub: [
-          'Jenkins pipeline setup for automated deployments',
-          'AWS infrastructure optimization and management',
-          'Large-scale legacy data migration with zero downtime',
-        ],
-      },
-    ],
-  },
-  {
     startDate: 'September 2019',
     endDate: 'Present',
     companyName: 'Cyberkrypts',
-    jobTitle: 'FullStack Developer / Browser Extension Developer',
+    jobTitle: 'Full Stack Engineer',
     location: 'Remote',
     occupation: 'Co-Founder',
     description: [
@@ -130,32 +172,68 @@ const workExperienceData: WorkExperienceItem[] = [
 ];
 
 const WorkExperience: React.FC = () => {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Work Experience',
+    itemListElement: workExperienceData.map((item, index) => ({
+      '@type': 'Organization',
+      position: index + 1,
+      name: item.companyName,
+      jobTitle: item.jobTitle,
+      startDate: item.startDate,
+      endDate: item.endDate || 'Present',
+      location: item.location,
+    })),
+  };
+
   return (
     <div className="flex flex-col gap-4 w-full -z-10">
-      <HyperText className="text-2xl font-bold" text="Professional Work Experience" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <HyperText className="text-3xl font-bold uppercase" text="Professional Work Experience" />
 
       <ol className="relative border-s border-gray-200 dark:border-gray-700">
         {workExperienceData.map((item, index) => (
           <li
             key={index}
             className={`mb-10 ms-4 ${index === workExperienceData.length - 1 ? 'mb-0' : ''}`}
+            itemScope
+            itemType="https://schema.org/WorkExperience"
           >
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            <time
+              className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+              itemProp="datePublished"
+            >
               {item.startDate} - {item.endDate || 'Present'}
             </time>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              {item.jobTitle} at {item.companyName}
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white" itemProp="jobTitle">
+              <span
+                itemProp="hiringOrganization"
+                itemScope
+                itemType="https://schema.org/Organization"
+              >
+                <span itemProp="name">
+                  {item.jobTitle} at {item.companyName}
+                </span>
+              </span>
             </h3>
             <div className="flex gap-2 mb-2">
-              <span className="text-sm text-gray-500 dark:text-gray-400">{item.location}</span>
-
+              <span className="text-sm text-gray-500 dark:text-gray-400" itemProp="jobLocation">
+                {item.location}
+              </span>
               <span className="text-sm text-gray-500 dark:text-gray-400">• {item.occupation}</span>
             </div>
-            <div className="mb-4 text-base font-normal text-gray-700 dark:text-gray-400">
+            <div
+              className="mb-4 text-base font-normal text-gray-700 dark:text-gray-400"
+              itemProp="description"
+            >
               <ul className="list-disc list-inside ">
                 {item.description.map((desc, index) => (
-                  <li key={index}>
+                  <li key={index} className="my-2">
                     <span className="font-semibold">{desc.main}</span>
                     {desc.sub && (
                       <ul className="list-circle list-inside ml-6 mt-1 text-gray-500 dark:text-gray-400">

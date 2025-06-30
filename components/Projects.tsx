@@ -21,16 +21,43 @@ const projectsData = [
     description:
       'Collaborated minor parts to develop a professional portfolio and blog platform for showcasing development work and technical writing. Features dark mode, responsive design, and optimized performance.',
     link: 'https://cyberkrypts.dev',
-    code: 'https://github.com/cyberkrypts/cyberkrypts.dev',
+    code: 'private',
     imageSrc: '/images/cyberkrypts.png',
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'MDX', 'SandBox', 'Devops'],
+  },
+  {
+    title: 'MultiScribe',
+    description:
+      'Implemented an advanced transcription service with R&D focus on multilingual support. Created a comprehensive dashboard for audio tracks.',
+    link: 'https://multiscribe.vercel.app/',
+    code: 'https://github.com/comming-soon-official/multiscribe',
+    imageSrc: '/images/multiscribe.png',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'GCP', 'translation'],
+  },
+  {
+    title: 'Budget Bro',
+    description:
+      'Collaborated on testing and backend authentication services, calculation services, and Flutter UI tweaking for a personal finance management application.',
+    link: 'https://budget-bro.vercel.app/',
+    code: 'private',
+    imageSrc: '/images/budget_bro.png',
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Flutter',
+      'Authentication',
+      'Go',
+      'Pockebase',
+    ],
   },
   {
     title: 'HindhuSmia AI',
     description:
       'AI-powered platform for Hindu scripture analysis and interpretation, featuring natural language processing and semantic search.',
     link: 'https://hindhusmia.ai',
-    code: 'private',
+    code: 'https://github.com/comming-soon-official/hindumisia.ai-rework',
     imageSrc: '/images/hindumisia.png',
     technologies: [
       'Next.js',
@@ -85,20 +112,13 @@ const projectsData = [
 function Projects() {
   return (
     <div className="flex flex-col gap-4 w-full">
-      <HyperText className="text-2xl font-bold" text="Overall Projects" />
+      <HyperText className="text-3xl font-bold uppercase " text="Overall Projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projectsData.map((project, index) => (
           <MagicCard key={index} className="hover:scale-105 transition-all">
             <div className="flex flex-col ">
               <Safari url="magicui.design" className="size-full" src={project.imageSrc} />
 
-              {/* <video
-                src={project.imageSrc}
-                autoPlay
-                muted
-                loop
-                className="rounded-t-md -mx-4 -mt-4 mb-4"
-              /> */}
               <div className="flex flex-col gap-3">
                 <h2 className="text-xl font-bold">{project.title}</h2>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{project.description}</p>

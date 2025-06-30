@@ -30,7 +30,7 @@ export default function Intro() {
           </p>
         </div>
         <p className="text-base text-gray-800 dark:text-gray-300">
-          Full-stack developer with 3+ years expertise in building scalable web applications and
+          Full-stack developer with 4+ years expertise in building scalable web applications and
           cloud infrastructure. Currently leading development of AI/ML platforms, browser
           extensions, and mobile applications. Proven track record in architecting high-performance
           solutions across fintech, video streaming, and enterprise SaaS domains. Strong focus on
