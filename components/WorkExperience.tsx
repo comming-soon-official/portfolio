@@ -18,81 +18,38 @@ interface WorkExperienceItem {
 
 const workExperienceData: WorkExperienceItem[] = [
   {
-    startDate: 'June 2024',
-    endDate: 'March 2025',
-    companyName: 'Octacomm',
-    jobTitle: 'Full Stack Developer',
-    location: 'Remote',
-    occupation: 'Consultant',
-    description: [
-      {
-        main: 'Developed an end-to-end transcription feature for the open-source meeting platform BigBlueButton (BBB)',
-        sub: [
-          'Supporting over 100+ global and regional languages with translation',
-          'Achieved 98% speaker-level transcription accuracy with individual tracking',
-          'Integrated with a real-time dashboard for easy access and monitoring',
-        ],
-      },
-      {
-        main: 'Added Safari video background filter support in BigBlueButton (BBB)',
-        sub: [
-          'Integrated custom in-browser ML model for real-time video processing',
-          'Maintained audio consistency by adding silent padding',
-          'Enhanced user experience with seamless background effects',
-        ],
-      },
-      {
-        main: 'Built custom backend infrastructure for meeting analytics',
-        sub: [
-          'Implemented Go and PocketBase for efficient data handling',
-          'Created AI scripts with thread concurrency for request processing',
-          'Developed audio chunking algorithms based on silent areas for improved accuracy',
-        ],
-      },
-      {
-        main: 'Enhanced meeting collaboration capabilities',
-        sub: [
-          'LiveKit integration for individual user streaming',
-          'Next.js dashboard for meeting transcription monitoring',
-          'Built meeting summarizer to extract key details and action items',
-        ],
-      },
-    ],
-  },
-  {
-    startDate: 'February 2023',
-    endDate: 'January 2024',
-    companyName: 'Bahikhata Inc.',
+    startDate: 'August 2025',
+    endDate: 'Present',
+    companyName: 'Fluvina Technologies (Bahikhata).',
     jobTitle: 'Full Stack Engineer',
     location: 'Remote',
     occupation: 'Consultant',
     description: [
       {
-        main: 'Developed full-featured expense tracker application',
+        main: 'Worked on Lendbox & NBFC Integrations',
         sub: [
-          'SMS OTP Authentication with Redis rate limiting',
-          'Automated recurring transactions via cron jobs',
-          'Data extraction & processing from legal documents to MongoDB',
+          'Reverse-engineered the Lendbox API for automated borrower and investor profile management.',
+          'Created a scalable integration pattern for connecting multiple NBFC custom APIs',
+          'Designed borrower and business info with the loan system for direct investments',
         ],
       },
       {
-        main: 'Built offline-first React Native mobile application',
+        main: 'IFA Dashboard Development',
         sub: [
-          'RealmDB integration for offline storage and real-time sync',
-          'Performance optimization and memory leak fixes',
-          'Migration strategies for seamless database upgrades',
+          'Developed the Advisor Panel from scratch for investor onboarding and execution.',
+          'Added AUM tracking and portfolio monitoring features for better client oversight.',
+          'Built investor profile tools to manage and streamline HNI client portfolios.',
         ],
       },
       {
-        main: 'Led DevOps and infrastructure management',
+        main: 'Worked On Investment App',
         sub: [
-          'Jenkins pipeline setup for automated deployments',
-          'AWS infrastructure optimization and management',
-          'Large-scale legacy data migration with zero downtime',
+          'Worked on KYC Digi-Locker System to fetch Investors information with fall back manual system',
         ],
       },
     ],
   },
+
   {
     startDate: 'September 2021',
     endDate: 'Present',
@@ -144,6 +101,14 @@ const workExperienceData: WorkExperienceItem[] = [
     occupation: 'Co-Founder',
     description: [
       {
+        main: 'Co-developed AI-Powered Outreach Automation',
+        sub: [
+          'Built a hyper-personalized email generator using scraped LinkedIn profile and post data.',
+          'Developed an organization insight tool by scraping company and C-suite LinkedIn data.',
+          'Used n8n workflows for automated email flows, LinkedIn scraping, and custom outreach ranking reports',
+        ],
+      },
+      {
         main: 'Co-developed WatchWithMe platform',
         sub: [
           'Next.js based full-stack implementation with optimized infrastructure',
@@ -151,6 +116,7 @@ const workExperienceData: WorkExperienceItem[] = [
           'LiveKit integration for video/audio calls',
         ],
       },
+
       {
         main: 'Implemented monitoring and analytics solutions',
         sub: [
@@ -165,6 +131,66 @@ const workExperienceData: WorkExperienceItem[] = [
           'Infrastructure design for CyberKrypts.dev',
           'Gym Buddy React Native mobile app for workout tracking',
           'JobJeeni browser extension for streamlined job hunting',
+        ],
+      },
+    ],
+  },
+  {
+    startDate: 'June 2024',
+    endDate: 'March 2025',
+    companyName: 'Octacomm',
+    jobTitle: 'Full Stack Developer',
+    location: 'Remote',
+    occupation: 'Consultant',
+    description: [
+      {
+        main: 'Developed an end-to-end transcription feature for the open-source meeting platform BigBlueButton (BBB)',
+        sub: [
+          'Supporting over 100+ global and regional languages with translation',
+          'Achieved 98% speaker-level transcription accuracy with individual tracking',
+          'Integrated with a real-time dashboard for easy access and monitoring',
+          'Implemented Go and PocketBase for efficient data handling',
+        ],
+      },
+      {
+        main: 'Added Safari video background filter support in BigBlueButton (BBB)',
+        sub: [
+          'Integrated custom in-browser ML model for real-time video processing',
+          'Enhanced user experience with seamless background effects',
+        ],
+      },
+    ],
+  },
+  {
+    startDate: 'February 2023',
+    endDate: 'January 2024',
+    companyName: 'Bahikhata Inc.',
+    jobTitle: 'Full Stack Engineer',
+    location: 'Remote',
+    occupation: 'Consultant',
+    description: [
+      {
+        main: 'Developed full-featured expense tracker application',
+        sub: [
+          'SMS OTP Authentication with Redis rate limiting',
+          'Automated recurring transactions via cron jobs',
+          'Data extraction & processing from legal documents to MongoDB',
+        ],
+      },
+      {
+        main: 'Built offline-first React Native mobile application',
+        sub: [
+          'RealmDB integration for offline storage and real-time sync',
+          'Performance optimization and memory leak fixes',
+          'Migration strategies for seamless database upgrades',
+        ],
+      },
+      {
+        main: 'Led DevOps and infrastructure management',
+        sub: [
+          'Jenkins pipeline setup for automated deployments',
+          'AWS infrastructure optimization and management',
+          'Large-scale legacy data migration with zero downtime',
         ],
       },
     ],
@@ -239,7 +265,7 @@ const WorkExperience: React.FC = () => {
                       <ul className="list-circle list-inside ml-6 mt-1 text-gray-500 dark:text-gray-400">
                         {desc.sub.map((subDesc, subIndex) => (
                           <li key={subIndex} className="text-sm">
-                            {subDesc}
+                            - {subDesc}
                           </li>
                         ))}
                       </ul>

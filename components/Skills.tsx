@@ -13,12 +13,12 @@ type SkillsData = {
 
 const skillsData: SkillsData = {
   Languages: {
-    primary: ['JavaScript', 'TypeScript', 'Python', 'C', 'Bash'],
-    basic: ['Go', 'C++'],
+    primary: ['JavaScript', 'TypeScript'],
+    basic: ['Go', 'Python', 'C', 'Bash'],
   },
   Frameworks: {
     primary: ['React', 'Node.js', 'Express.js', 'Next.js', 'WXT Extensions'],
-    basic: ['Flask', 'Django', 'Gin', 'FastAPI', 'Flutter'],
+    basic: ['Flask', 'Django', 'FastAPI', 'Flutter'],
   },
   Styling: ['Tailwind CSS', 'Bootstrap', 'CSS', 'SASS'],
   'UI Components': {
@@ -28,34 +28,14 @@ const skillsData: SkillsData = {
 
   Database: ['MongoDB', 'PostgreSQL', 'SQLite', 'RealmDB'],
   'DevOps & Cloud': {
-    primary: [
-      'Jenkins',
-      'CI/CD',
-      'Git',
-      'GitLab',
-      'Redis',
-      'Docker',
-      'Coolify',
-      'Snyk',
-      'Hetzner',
-      'AWS',
-      'Listmonk',
-    ],
-    basic: ['Kubernetes'],
+    primary: ['Jenkins', 'CI/CD', 'Git', 'GitLab', 'Coolify', 'Hetzner', 'AWS', 'Listmonk'],
+    basic: ['Kubernetes', 'Redis', 'Docker', 'Snyk'],
   },
   'Monitoring & Analytics': ['Grafana', 'Prometheus', 'Appsmith', 'Apache ECharts', 'Chart.js'],
   OS: ['Linux (Arch, Debian)', 'Windows'],
   VAPT: {
-    primary: [
-      'OWASP',
-      'OSINT',
-      'Burp Suite',
-      'Metasploit',
-      'Privilege Escalation',
-      'Bug Hunting',
-      'Reverse Engineering',
-    ],
-    basic: ['BOF'],
+    primary: ['OWASP', 'OSINT', 'Burp Suite', 'Metasploit', 'Bug Hunting', 'Reverse Engineering'],
+    basic: ['BOF', 'Privilege Escalation'],
   },
   'Mobile Development': {
     primary: ['React Native'],
@@ -63,6 +43,7 @@ const skillsData: SkillsData = {
   },
   Tools: [
     'Postman',
+    'n8n',
     'VSCode',
     'Cursor',
     'Drizzle Studio',

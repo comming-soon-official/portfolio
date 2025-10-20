@@ -22,7 +22,7 @@ const languages = [
   },
   {
     language: 'Hindi',
-    proficiency: 'Intermediate',
+    proficiency: 'Proficient',
     flag: '🇮🇳',
   },
 ];

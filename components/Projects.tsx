@@ -8,6 +8,15 @@ import Safari from './ui/safari';
 
 const projectsData = [
   {
+    title: 'Lead Scope',
+    description:
+      'Instantly analyze companies and personalize your emails to convert prospects into real opportunities.',
+    link: 'https://watchwithme.in',
+    code: 'private',
+    imageSrc: '/images/lead_scope.png',
+    technologies: ['Next.js', 'n8n', 'TypeScript', 'Tailwind CSS'],
+  },
+  {
     title: 'WatchWithMe',
     description:
       'Collaborated and build a synchronized video watching platform that allows users to watch content together in real-time with video/audio chat capabilities.',
@@ -52,6 +61,26 @@ const projectsData = [
       'Pockebase',
     ],
   },
+
+  {
+    title: 'IFA Advisor Dashboard',
+    description:
+      'Developed an Advisor Panel from scratch with investor onboarding, AUM tracking, and Client portfolio management features',
+    link: 'https://ifa.bahikhata.org',
+    code: 'private',
+    imageSrc: '/images/ifa_dashboard.png',
+    technologies: ['NextJS', 'Parse-Platform', 'Shadcn', 'Server Functions'],
+  },
+  {
+    title: 'Wealth Bahikhata',
+    description:
+      'Collaborated with financial experts and developers to create a modern accounting and business management platform built for Indian businesses with GST compliance and financial reporting.',
+    link: 'https://wealth.bahikhata.org',
+    code: 'private',
+    imageSrc: '/images/bahikhata.png',
+    technologies: ['React', 'MongoDB', 'Node.js', 'Bootstrap'],
+  },
+
   {
     title: 'HindhuSmia AI',
     description:
@@ -69,15 +98,6 @@ const projectsData = [
       'ShadCN',
       'Apache EGraphs',
     ],
-  },
-  {
-    title: 'Bahikhata',
-    description:
-      'Collaborated with financial experts and developers to create a modern accounting and business management platform built for Indian businesses with GST compliance and financial reporting.',
-    link: 'https://web.bahikhata.org',
-    code: 'private',
-    imageSrc: '/images/bahikhata.png',
-    technologies: ['React', 'MongoDB', 'Node.js', 'Bootstrap'],
   },
   {
     title: 'AIEnsured Saas',

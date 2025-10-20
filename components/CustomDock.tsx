@@ -72,7 +72,7 @@ const DATA = {
       },
       DOwnload: {
         name: 'Download Resume',
-        url: "/images/Himal's Resume 2025.pdf",
+        url: '/images/Himal_Resume_2025.pdf',
         icon: Download,
       },
     },
