@@ -52,7 +52,7 @@ const workExperienceData: WorkExperienceItem[] = [
 
   {
     startDate: 'September 2021',
-    endDate: 'Present',
+    endDate: 'August 2025',
     companyName: 'TESTAING',
     jobTitle: 'Frontend Engineer',
     location: 'Remote',
