@@ -11,7 +11,7 @@ const projectsData = [
     title: 'Lead Scope',
     description:
       'Instantly analyze companies and personalize your emails to convert prospects into real opportunities.',
-    link: 'https://watchwithme.in',
+    link: 'https://mail-crafter-alpha.vercel.app',
     code: 'private',
     imageSrc: '/images/lead_scope.png',
     technologies: ['Next.js', 'n8n', 'TypeScript', 'Tailwind CSS'],
